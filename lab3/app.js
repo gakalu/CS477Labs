@@ -1,25 +1,23 @@
-const http=require('http')
-const fs = require('fs');
-http.createServer((req,res)=>{;
-    const url = req.url;
-    const method = req.method;
+http.createServer((req,res)=>{
+    const url=req.url;
     if(url==='/'){
     fs.createReadStream('index.html').pipe(res);
-    }
-    else if (url === '/messsage' && method === 'POST') {
+
+    }else if (url === '/message' && req.method === 'POST') {
         const body = [];
         req.on('data', (chunk) => {
             body.push(chunk);
         });
         req.on('end', () => {
             const parsedBody =Buffer.concat(body).toString();
-            console.log(parsedBody);
-            fs.writeFile('message.txt','message1.txt',()=>{
-            res.end('save sucessfully');
+            const text=parsedBody.split('=');
+            fs.writeFile('message.txt',`${text[1]}`,()=>{
             });
-            res.statusCode=302;
-            res.setHeader("Location","/");
-            return res.end();
         });
+        
+        fs.createReadStream('index.html').pipe(res);   
+    }
+    else{
+    res.end("404 page does not found");
     }
 }).listen(3000,()=> console.log('listening to 3000'));
