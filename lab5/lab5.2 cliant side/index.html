@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="myGroup" content="Bookstore">
+    <title>My Shopping</title>
+
+    <link href="./resources/bootstrap.min.css" rel="stylesheet">
+    <link href="./resources/carousel.css" rel="stylesheet">
+    <!-- <script src="./resources/bootstrap.bundle.min.js"></script> -->
+    <script src="./resources/main.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">My Shopping</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" id="nav-home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <br>
+        <div class="container marketing">
+            <div id="products" class="row">
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-12">
+                    <h2 class="featurette-heading" id="product-heading">Add a new Book</h2>
+                    <p class="lead">
+                        <form id="product-form">
+                            <div class="mb-3">
+                                <label for="title" class="form-label">item</label>
+                                <input type="text" class="form-control" id="title">
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="price" class="form-label">Price</label>
+                                <input type="text" class="form-control" id="price">
+                            </div>
+                            <div class="mb-3">
+                                <label for="description" class="form-label">Description</label>
+                                <textarea class="form-control" id="description" rows="3"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" id="product-btn">Submit</button>
+                        </form>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>
