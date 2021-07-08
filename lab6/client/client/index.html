@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Rujuan Xing">
+    <title>Group D Shop</title>
+
+    <link href="./resources/bootstrap.min.css" rel="stylesheet">
+    <link href="./resources/carousel.css" rel="stylesheet">
+    <!-- <script snoderc="./resources/bootstrap.bundle.min.js"></script> -->
+    <script src="./resources/main.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Group D Shopping cart</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <form id="loginForm">
+                        <input class="form-control me-2" placeholder="Username" id="username" required>
+                        <input class="form-control me-2" type="password" placeholder="Password" id="password" required>
+                        <button class="btn btn-outline-success" type="submit" id="loginBtn" required>Login</button>
+                        <button class="btn btn-outline-success" type="submit" id="signup">Signup</button>
+                    </form>
+                    <span id="logout"></span>
+                    <button class="btn btn-outline-success" id="logoutBtn">Logout</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="shopping">
+        <h2>wecome to our shopping</h2>
+        <br>
+        <div class="container marketing">
+            <div id="products" class="row">
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-12">
+                    <h2 class="featurette-heading" id="product-heading">Add a new Book</h2>
+                    <p class="lead">
+                        <form id="product-form">
+                            <div class="mb-3">
+                                <label for="title" class="form-label">Title</label>
+                                <input type="text" class="form-control" id="title" required><br /><br />
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="price" class="form-label">Price</label>
+                                <input type="text" class="form-control" id="price" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="description" class="form-label">Description</label>
+                                <textarea class="form-control" id="description" rows="3" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" id="product-btn">Submit</button>
+                        </form>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>               
+    <footer>Copyright This app is only for training purpose</footer>
+</body>
+</html>
+<html>
+</html>
